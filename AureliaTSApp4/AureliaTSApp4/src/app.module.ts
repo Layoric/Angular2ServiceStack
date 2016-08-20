@@ -1,10 +1,10 @@
 ﻿import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, BrowserPlatformLocation } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HelloComponent } from './hello/hello';
+import { HomeComponent } from './home/home';
 import { View1Component } from './view1/view1';
 import { View2Component } from './view2/view2';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Router } from '@angular/router';
 import { bootstrap } from '@angular/platform-browser-dynamic';
 import { AppComponent } from './app';
 import {
@@ -12,15 +12,14 @@ import {
 } from './app.routing';
 import {
     LocationStrategy,
-    HashLocationStrategy,
-    PathLocationStrategy
+    HashLocationStrategy
 } from '@angular/common';
 
 @NgModule({
     imports: [
         BrowserModule,
         FormsModule,
-        RouterModule.forRoot(appRoutes, { useHash: true })
+        RouterModule.forRoot(appRoutes)
     ],
     providers: [{
         provide: LocationStrategy,
@@ -28,10 +27,11 @@ import {
     }],
     declarations: [
         AppComponent,
-        HelloComponent,
+        HomeComponent,
         View1Component,
         View2Component
     ],
     bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule {
+}

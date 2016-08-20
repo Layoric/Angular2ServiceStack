@@ -20,7 +20,7 @@ var HelloComponent = (function () {
     };
     HelloComponent.prototype.nameChanged = function (newValue) {
         var _this = this;
-        if (newValue.length > 0) {
+        if (newValue != null && newValue.length > 0) {
             var req = new dtos_1.Hello();
             req.Name = newValue;
             this.client.get(req).then(function (helloResponse) {

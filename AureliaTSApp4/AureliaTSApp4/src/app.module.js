@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
-var hello_1 = require('./hello/hello');
+var home_1 = require('./home/home');
 var view1_1 = require('./view1/view1');
 var view2_1 = require('./view2/view2');
 var router_1 = require('@angular/router');
@@ -26,7 +26,7 @@ var AppModule = (function () {
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                router_1.RouterModule.forRoot(app_routing_1.appRoutes, { useHash: true })
+                router_1.RouterModule.forRoot(app_routing_1.appRoutes)
             ],
             providers: [{
                     provide: common_1.LocationStrategy,
@@ -34,7 +34,7 @@ var AppModule = (function () {
                 }],
             declarations: [
                 app_1.AppComponent,
-                hello_1.HelloComponent,
+                home_1.HomeComponent,
                 view1_1.View1Component,
                 view2_1.View2Component
             ],

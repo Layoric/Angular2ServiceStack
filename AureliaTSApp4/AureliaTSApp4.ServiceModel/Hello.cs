@@ -17,4 +17,11 @@ namespace AureliaTSApp4.ServiceModel
     {
         public string Result { get; set; }
     }
+
+    [Route("/hello2")]
+    [Route("/hello2/{Name2}")]
+    public class Hello2 : IReturn<HelloResponse>
+    {
+        public string Name2 { get; set; }
+    }
 }

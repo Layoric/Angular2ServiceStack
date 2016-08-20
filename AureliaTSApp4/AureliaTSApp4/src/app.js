@@ -15,13 +15,13 @@ var router_1 = require('@angular/router');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Angular2App1';
-        this.routes = app_routing_1.appRoutes;
+        this.routes = app_routing_1.appRoutes.filter(function (val) { return val.path != ''; });
     }
     AppComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'app-root',
-            templateUrl: 'app.html',
+            template: "\n        <div class=\"navbar navbar-inverse\" role=\"navigation\">\n            <div class=\"container\">\n                <div class=\"navbar-header\">\n                    <a class=\"navbar-brand\" href=\"#/\">{{title}}</a>\n                    <ul class=\"nav navbar-nav\">\n                        <li *ngFor=\"let route of routes\">\n                            <a routerLink=\"{{route.path}}\">{{route.data.name}}</a>\n                        </li>\n                    </ul>\n                </div>\n            </div>\n        </div>\n\n        <div class=\"container\">\n            <router-outlet></router-outlet>\n        </div>\n    ",
             directives: [router_1.RouterLink]
         }), 
         __metadata('design:paramtypes', [])
