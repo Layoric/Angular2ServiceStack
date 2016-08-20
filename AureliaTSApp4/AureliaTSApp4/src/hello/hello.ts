@@ -3,9 +3,8 @@ import { JsonServiceClient } from 'servicestack-client';
 import { Hello } from './../dtos';
 
 @Component({
-    moduleId: module.id,
     selector: 'hello',
-    templateUrl: 'hello.html'
+    templateUrl: './src/hello/hello.html'
 })
 export class HelloComponent{
     result: string;

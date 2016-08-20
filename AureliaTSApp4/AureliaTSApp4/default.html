@@ -8,21 +8,22 @@
     <link rel="stylesheet" href="css/app.css"/>
     <!-- endbuild -->
     <title>AureliaTSApp4</title>
-    <!-- build:js system.js -->
+    <!-- build:remove -->
     <script src="jspm_packages/system.js"></script>
     <!-- endbuild -->
-
+    <!-- build:remove -->
     <script src="config.js"></script>
-
+    <!-- endbuild -->
     <!-- build:remove -->
     <script src="deps.lib.js"></script>
     <!-- endbuild -->
     <!-- htmlbuild:appbundle -->
     <!-- endbuild -->
-
+    <!-- build:remove -->
     <script>
         System.import('src/main').catch(console.error.bind(console));
     </script>
+    <!-- endbuild -->
 </head>
 <body>
     <app-root>loading...</app-root>

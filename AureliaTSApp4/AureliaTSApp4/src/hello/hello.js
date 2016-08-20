@@ -37,9 +37,8 @@ var HelloComponent = (function () {
     ], HelloComponent.prototype, "name", void 0);
     HelloComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
             selector: 'hello',
-            templateUrl: 'hello.html'
+            templateUrl: './src/hello/hello.html'
         }), 
         __metadata('design:paramtypes', [])
     ], HelloComponent);

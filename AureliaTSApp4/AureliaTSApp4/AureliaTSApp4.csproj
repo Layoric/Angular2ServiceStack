@@ -129,7 +129,6 @@
     <Content Include="deps.lib.js" />
     <Content Include="packages.config" />
     <Content Include="package.json" />
-    <Content Include="src\app.css" />
     <Content Include="src\hello\hello.html" />
     <Content Include="typings.json" />
     <Content Include="tsconfig.json" />
